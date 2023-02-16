@@ -9,6 +9,10 @@ import java.util.Map;
 // BEGIN
 public class App {
     public static Map getWordCount(String sentence) {
+        if (sentence.equals("")) {
+            return new HashMap<String, Integer>();
+        }
+
         List<String> sentenceArr = new ArrayList<>(Arrays.asList(sentence.split(" ")));
         Map<String, Integer> result = new HashMap<>();
 
@@ -29,7 +33,7 @@ public class App {
         Map<String, Integer> newWordsCount = new HashMap<>();
         newWordsCount.putAll(wordsCount);
         for (Map.Entry<String, Integer> entry: newWordsCount.entrySet()) {
-            resultArr.add(entry.getKey() + " " + entry.getValue());
+            resultArr.add(entry.getKey() + ": " + entry.getValue());
         }
         return "{\n  " + String.join("\n  ", resultArr) + "\n}";
     }
