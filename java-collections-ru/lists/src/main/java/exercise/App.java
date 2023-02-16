@@ -11,10 +11,7 @@ public class App {
         List<String> wordList = new ArrayList<>(Arrays.asList(word.split("")));
         for (String t: wordList) {
             if (textList.contains(t.toLowerCase()) || textList.contains(t.toUpperCase())) {
-                System.out.println(textList);
-                System.out.println("textList contains t:" + t);
                 textList.remove(t);
-                System.out.println(textList);
             } else {
                 return false;
             }
