@@ -1,24 +1,25 @@
-package exercise;
-
+//package examples;
+//
+//import java.util.Map.Entry;
 // import java.util.*;
-
-public class Example {
-    public static void main(String[] args) {
+//
+//public class Example {
+//    public static void main(String[] args) {
 //        // проблематика
-        // Entry entry = new Entry(1, "Egor");
-        // System.out.println(entry.getValue1());
-        // System.out.println(entry.getValue2());
-
+//         Entry entry = new Entry(1, "Egor");
+//         System.out.println(entry.getValue1());
+//         System.out.println(entry.getValue2());
+//
 //        String name = entry.getValue2();
 //        System.out.println("User's name is = " + name);
-
+//
 //
 //        IntegerStringEntry integerStringEntry = new IntegerStringEntry(1, "Max");
 //        String name = integerStringEntry.getValue2();
 //        int id = integerStringEntry.getValue1();
 //
 //        System.out.println("User with id = " + id + " has name = " + name);
-
+//
 //        // Так проблема решается в Java
 //        GEntry<String> gEntry = new GEntry<>(1, "Egor");
 //        String name = gEntry.getValue2();
@@ -67,5 +68,5 @@ public class Example {
 //        int index = Util.findElementIndex(userList, user2);
 //        System.out.println("Index of user2 is: " + index);
 //        // а если user2 = "example"...
-    }
-}
+//    }
+//}

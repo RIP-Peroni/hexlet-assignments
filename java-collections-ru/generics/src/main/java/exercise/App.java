@@ -1,23 +1,27 @@
 package src.main.java.exercise;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 import java.util.Map.Entry;
 
 // BEGIN
 public class App {
-    public static List<Map<String, String>> findWhere(List<Map<String, String>> books, Map<String, String> where) {
-        List<Map<String, String>> result = new ArrayList<>();
-        for (Map<String, String> book: books) {
-            Set<String> bookSet = new HashSet<>();
-            Set<String> whereSet = new HashSet<>();
+    public static <K, V> List<Map<K, V>> findWhere(List<Map<K, V>> books, Map<K, V> where) {
+        List<Map<K, V>> result = new ArrayList<>();
+        for (Map<K, V> book: books) {
+            boolean match = true;
 
-            bookSet.addAll(book.keySet());
-            bookSet.addAll(book.values());
+            for (Entry<K, V> entry: where.entrySet()) {
+                K key = entry.getKey();
+                V value = entry.getValue();
+                if (!book.containsKey(key) || !book.get(key).equals(value)) {
+                    match = false;
+                    break;
+                }
+            }
 
-            whereSet.addAll(where.keySet());
-            whereSet.addAll(where.values());
-
-            if (bookSet.containsAll(whereSet)) {
+            if (match) {
                 result.add(book);
             }
         }
