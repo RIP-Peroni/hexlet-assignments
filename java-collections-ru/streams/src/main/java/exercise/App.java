@@ -1,15 +1,14 @@
 package java.exercise;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Arrays;
 
 // BEGIN
 public class App {
     public static String[] freeHosts = {
-            "gmail.com",
-            "yandex.ru",
-            "hotmail.com",
+        "gmail.com",
+        "yandex.ru",
+        "hotmail.com",
     };
     public static int getCountOfFreeEmails(List<String> emails) {
         List<String> freeHostsList = Arrays.asList(freeHosts);
