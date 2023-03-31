@@ -1,7 +1,6 @@
 package test.java.exercise;
 
 import main.java.exercise.Sorter;
-import org.junit.Test;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
